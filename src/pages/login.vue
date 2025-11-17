@@ -1,7 +1,6 @@
 <template>
-	<div>
-		login page
-	</div>
+	<Page/>
 </template>
 <script setup lang="ts">
+import Page from '@/components/domain/login.vue'
 </script>
