@@ -2,9 +2,7 @@
   <div class="h-screen flex justify-center items-center bg-gray-100">
     <div class="w-[500px] bg-white p-6 rounded-lg shadow-lg flex flex-col gap-6">
       <h2 class="text-2xl font-semibold text-center text-gray-800">Авторизация</h2>
-      <Input />
-      <Input />
-      <Input />
+      <Input id="email" label="Почта" placeholder="Введите почту" />
       <Button></Button>
     </div>
   </div>
