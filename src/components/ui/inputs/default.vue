@@ -9,7 +9,7 @@
     :disabled="disabled"
     :value="modelValue"
     @input="onInput">
-    <p class="text-xs font-medium text-[#EF4444]">
+    <p v-if="errorMsg" class="text-xs font-medium text-[#EF4444]">
       {{ errorMsg }}
     </p>
   </div>
@@ -29,7 +29,7 @@ withDefaults(defineProps<{
   disabled?: boolean
 }>(), {
   error: false,
-  disabled: true
+  disabled: false
 })
 
 const emit = defineEmits<{
