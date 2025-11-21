@@ -13,15 +13,18 @@ import Input from '../ui/inputs/default.vue'
 import Password from '../ui/inputs/password.vue'
 import Button from '../ui/buttons/default.vue'
 import { reactive } from 'vue'
+import { useAlertStore } from '@/stores/alert'
 defineOptions({
   name: 'LoginComponent'
 })
+const Alert = useAlertStore()
 const form = reactive({
   email: '',
   password: ''
 })
 
 const login = () => {
+  Alert.loading()
   console.log('123');
 }
 </script>
