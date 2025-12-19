@@ -18,14 +18,20 @@ const routes: RouteRecordRaw[] = [
     ]
   },
   {
-    path: '/login',
+    path: '/auth/',
     component: EmptyLayout,
     children: [
       { 
-        path: '',
+        path: 'login',
         name: 'login',
-        component: () => import('@/pages/login.vue'),
+        component: () => import('@/pages/auth/login.vue'),
         meta: { title: 'Авторизация' }
+      },
+      { 
+        path: 'register',
+        name: 'register',
+        component: () => import('@/pages/auth/register.vue'),
+        meta: { title: 'Регистрация' }
       }
     ]
   }
