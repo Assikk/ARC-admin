@@ -23,6 +23,7 @@ import Button from '@/components/ui/buttons/default.vue'
 import { ref, reactive, watch } from 'vue'
 import { useAlertStore } from '@/stores/alert'
 import { loginSchema } from '@/interfaces/auth.interface'
+import type { loginInterface } from '@/interfaces/auth.interface'
 import { validateForm } from '@/utils/validateForm'
 import { authService } from '@/services/auth.service'
 import { useRouter } from 'vue-router'
@@ -33,7 +34,7 @@ const Alert = useAlertStore()
 const router = useRouter()
 const disabledLogin = ref<boolean>(false)
 const errors = reactive<Record<string, any>>({})
-const form = reactive({
+const form = reactive<loginInterface>({
   email: '',
   password: ''
 })
@@ -48,8 +49,9 @@ const login = async () => {
       await authService.login(form)
       Alert.success('Вы успешно вошли в систему')
       router.push('/')
-    } catch (error) {
+    } catch (error: any) {
       disabledLogin.value = false
+      Alert.error(error.response.data.message)
       console.log(error);
     }
   }

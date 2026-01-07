@@ -32,6 +32,12 @@ const routes: RouteRecordRaw[] = [
         name: 'register',
         component: () => import('@/pages/auth/register.vue'),
         meta: { title: 'Регистрация' }
+      },
+      { 
+        path: 'verify',
+        name: 'Verify',
+        component: () => import('@/pages/auth/verify.vue'),
+        meta: { title: 'Верификация' }
       }
     ]
   }

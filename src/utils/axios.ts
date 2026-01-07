@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const instance = axios.create({
-  baseURL: 'http://tjk-scrumtest01:8080/api/',
+  baseURL: 'http://172.28.198.47:8080/api/',
   headers: {
     'Content-Type': 'application/json',
   },
