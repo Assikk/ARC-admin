@@ -1,8 +1,10 @@
 <template>
-  <button class="min-w-[100px] p-3 font-semibold rounded-lg transition-colors cursor-pointer"
+  <button class="min-w-[100px] p-3 font-semibold rounded-lg transition-colors cursor-pointer flex items-center justify-center gap-2"
   :class="[color, full ? 'w-full' : 'self-center']"
   :disabled="disabled">
+    <slot name="prev"></slot>
     <slot></slot>
+    <slot name="next"></slot>
   </button>
 </template>
 <script setup lang="ts">

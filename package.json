@@ -7,14 +7,19 @@
     "node": "^20.19.0 || >=22.12.0"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build"
   },
   "dependencies": {
+    "@vue-leaflet/vue-leaflet": "^0.10.1",
     "axios": "^1.13.2",
+    "dayjs": "^1.11.19",
+    "js-cookie": "^3.0.5",
+    "leaflet": "^1.9.4",
+    "lucide-vue-next": "^0.562.0",
     "pinia": "^3.0.3",
     "vue": "^3.5.22",
     "vue-router": "^4.6.3",
@@ -23,6 +28,8 @@
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.17",
     "@tsconfig/node22": "^22.0.2",
+    "@types/js-cookie": "^3.0.6",
+    "@types/leaflet": "^1.9.21",
     "@types/node": "^22.18.11",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/tsconfig": "^0.8.1",

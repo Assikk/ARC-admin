@@ -18,3 +18,29 @@ body {
 .link:hover {
   background-size: 100% 2px;
 }
+
+table {
+  width: 100%;
+}
+thead {
+  background: #f3f3f3;
+}
+thead tr th {
+  padding: 12px 24px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #6b7280;
+  letter-spacing: 0.6px;
+  text-align: start;
+}
+thead tr td {
+  padding: 12px 24px;
+}
+tbody tr td {
+  padding: 16px 24px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1e3148;
+}

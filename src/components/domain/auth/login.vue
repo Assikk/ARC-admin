@@ -6,7 +6,12 @@
       :error="errors.email ? true : false" :error-msg="errors.email"/>
       <Password v-model="form.password" id="password" label="Пароль" placeholder="Введите пароль"
       :error="errors.password ? true : false" :error-msg="errors.password"></Password>
-      <Button full @click="login" :disabled="disabledLogin"> Войти </Button>
+      <Button full @click="login" :disabled="disabledLogin"> 
+        Войти
+        <template #next>
+          <LogIn/>
+        </template> 
+      </Button>
       <p class="text-center">
         Нету аккаунта ?
         <RouterLink to="/auth/register" class="link">
@@ -27,6 +32,7 @@ import type { loginInterface } from '@/interfaces/auth.interface'
 import { validateForm } from '@/utils/validateForm'
 import { authService } from '@/services/auth.service'
 import { useRouter } from 'vue-router'
+import { LogIn } from 'lucide-vue-next'
 defineOptions({
   name: 'LoginComponent'
 })
